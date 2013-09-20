@@ -1,6 +1,6 @@
 # Tacksize
 
-TODO: Write a gem description
+This is a port of the [taxonomic toolkit I've created for the R language](https://github.com/ropensci/taxize_). R is great for scientists, etc., but doesn't work in the web really at all. Thus, the port to Ruby, which plays nice with the web. 
 
 ## Installation
 
@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Resolve a taxonomic name using the Global Names Resolver from the Encyclopedia of Life (EOL).
+
+`Tacksize.gnr_resolve('Helianthus annuus')`
 
 ## Contributing
 
