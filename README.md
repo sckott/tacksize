@@ -10,17 +10,48 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
+```
+bundle
+```
 
 Or install it yourself as:
 
-    $ gem install tacksize
+```
+gem install tacksize
+```
 
 ## Usage
 
+Start irb, then import the `tacksize` library
+
+```ruby
+require 'tacksize'
+```
+
 Resolve a taxonomic name using the Global Names Resolver from the Encyclopedia of Life (EOL).
 
-`Tacksize.gnr_resolve('Helianthus annuus')`
+```ruby
+out = Tacksize.gnr_resolve('Helianthus anuus')
+out.map {|n| n['name']}
+
+["Helianthus annuus", "Helianthus annus"]
+```
+
+Parse names using EOL's name parser
+
+```ruby
+Tacksize.gniParse(names = ['Cyanistes caeruleus','Helianthus annuus'])
+```
+
+Search EOL's Global Names Index
+
+```ruby
+Tacksize.gniSearch(:search_term => 'ani*')
+```
+
+```ruby
+Tacksize.gniSearch(:search_term => 'ani*', :per_page => 1)
+```
 
 ## Contributing
 
