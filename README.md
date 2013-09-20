@@ -53,6 +53,12 @@ Tacksize.gniSearch(:search_term => 'ani*')
 Tacksize.gniSearch(:search_term => 'ani*', :per_page => 1)
 ```
 
+Get details from EOL's database on a particular ID
+
+```ruby
+Tacksize.gniDetails(:id => 17802847)
+```
+
 ## Contributing
 
 1. Fork it
