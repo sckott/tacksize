@@ -2,10 +2,6 @@ require 'tacksize/version'
 require 'httparty'
 
 module Tacksize
-  def self.tacks
-    "some shit"
-  end
-
   def self.itisPing
   	shit = HTTParty.get('http://www.itis.gov/ITISWebService/services/ITISService/getDescription')
   	shit.values
